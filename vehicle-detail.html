@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2015 Jeep Grand Cherokee Limited — OPENLANE</title>
+  <title>2024 Hyundai Ioniq 5 Limited — OPENLANE</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,11 +29,11 @@
 
   <div class="nav-spacer"></div>
 
-  <div class="nav-timer" id="navTimer">Starts in 18:10:17</div>
+  <div class="nav-timer" id="navTimer">Ends in 02:49:17</div>
 
   <div class="nav-dealer-chip">
-    <div class="dealer-avatar">JG</div>
-    <div class="dealer-chip-name">Keffer Hyundai</div>
+    <div class="dealer-avatar">HB</div>
+    <div class="dealer-chip-name">Huntington Beach Chrysler Jeep Ram</div>
     <span class="dealer-chip-caret">▾</span>
   </div>
 
@@ -43,7 +43,7 @@
     </svg>
     Watchlist
   </div>
-  <div class="nav-action-btn">
+  <div class="nav-action-btn" id="notesBtn">
     <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
       <rect x="2" y="2" width="10" height="10" rx="1.5"/>
       <line x1="4.5" y1="5" x2="9.5" y2="5"/>
@@ -71,9 +71,9 @@
 <div class="btm-bar">
   <div class="btm-meta">
     <span class="btm-label">&#9733; Absolute sale</span>
-    <span class="btm-bids">16 Bids &middot; Ends today 3:00 PM CT</span>
+    <span class="btm-bids">1 Bid</span>
   </div>
-  <div class="btm-bid-info">Top bid <strong>$5,400</strong></div>
+  <div class="btm-bid-info">Top bid <strong>$29,800</strong></div>
   <div class="btm-spacer"></div>
   <button class="btm-bid-btn" id="bidBtn">Bid</button>
 </div>
@@ -86,14 +86,14 @@
       <button class="modal-close" onclick="closeBidModal()">&#10005;</button>
     </div>
     <div class="modal-body">
-      <p class="modal-min-bid">Minimum bid is $5,400</p>
+      <p class="modal-min-bid">Minimum bid is $29,800</p>
       <div class="modal-field">
         <label>Bid amount</label>
-        <div class="modal-input-wrap"><span class="modal-input-pre">$</span><input type="number" value="5400" class="modal-input"></div>
+        <div class="modal-input-wrap"><span class="modal-input-pre">$</span><input type="number" value="29800" class="modal-input"></div>
       </div>
       <div class="modal-field">
         <label>Max Bid amount</label>
-        <div class="modal-input-wrap"><span class="modal-input-pre">$</span><input type="number" value="7000" class="modal-input"></div>
+        <div class="modal-input-wrap"><span class="modal-input-pre">$</span><input type="number" value="32000" class="modal-input"></div>
       </div>
       <div class="modal-field">
         <label>Notes</label>
@@ -127,47 +127,157 @@
   </div>
 </div>
 
-<!-- MARKET DATA MODAL -->
+<!-- PREDICTIVE PRICING MODAL -->
 <div class="modal-overlay" id="marketModal" style="display:none">
   <div class="modal-box modal-wide">
     <div class="modal-header">
-      <span class="modal-title">OPENLANE Market Data</span>
+      <div>
+        <div style="font-size:10px;color:#0052cc;margin-bottom:3px;">&#10022; powered by OPENLANE Intelligence</div>
+        <span class="modal-title">OPENLANE Predictive Pricing</span>
+      </div>
       <button class="modal-close" onclick="closeMarketModal()">&#10005;</button>
     </div>
     <div class="modal-body">
-      <p style="font-size:12px;color:#888;margin-bottom:14px;">Based on 8206 dealer wholesale sales in the last 3 months</p>
-      <div class="market-grid">
-        <div class="market-col low"><div class="mc-label">Lowest</div><div class="mc-val">$4,500</div></div>
-        <div class="market-col avg active"><div class="mc-label">Average</div><div class="mc-val">$8,560</div></div>
-        <div class="market-col high"><div class="mc-label">Highest</div><div class="mc-val">$10,700</div></div>
+      <div class="pp-modal-vehicle">
+        <div class="pp-modal-vehicle-name">2024 Hyundai Ioniq 5 Limited</div>
+        <div class="pp-modal-vin">VIN KM8KRADE3NU266172</div>
       </div>
-      <div style="margin:18px 0 10px;font-size:13px;font-weight:600;">Similar units recently sold on OPENLANE</div>
+      <div class="pp-forecast-subtitle">90-day forecast &nbsp;&middot;&nbsp; OPENLANE wholesale data as of Apr 24, 2026</div>
+
+      <!-- Forecast chart -->
+      <div class="pp-chart-wrap">
+        <svg width="100%" viewBox="0 0 520 185" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+          <!-- Y-axis gridlines -->
+          <line x1="50" y1="28" x2="500" y2="28" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="50" y1="69" x2="500" y2="69" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="50" y1="110" x2="500" y2="110" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="50" y1="151" x2="500" y2="151" stroke="#e5e7eb" stroke-width="1"/>
+          <!-- Y-axis labels -->
+          <text x="46" y="31" font-size="9" fill="#9ca3af" text-anchor="end">$30,500</text>
+          <text x="46" y="72" font-size="9" fill="#9ca3af" text-anchor="end">$29,000</text>
+          <text x="46" y="113" font-size="9" fill="#9ca3af" text-anchor="end">$27,500</text>
+          <text x="46" y="154" font-size="9" fill="#9ca3af" text-anchor="end">$26,000</text>
+          <!-- Shaded band (polygon between high and low lines) -->
+          <polygon points="60,57 207,64 353,70 500,78 500,149 353,133 207,102 60,65" fill="#dbeafe" opacity="0.65"/>
+          <!-- Reference dashed line at $29,665 (y≈51) -->
+          <line x1="60" y1="51" x2="500" y2="51" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="64" y="48" font-size="8.5" fill="#3b82f6">at cost of this sale</text>
+          <!-- High line -->
+          <polyline points="60,57 207,64 353,70 500,78" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round"/>
+          <!-- Low line -->
+          <polyline points="60,65 207,102 353,133 500,149" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="5,3" stroke-linejoin="round"/>
+          <!-- X-axis labels -->
+          <text x="60" y="175" font-size="9" fill="#9ca3af" text-anchor="middle">Today</text>
+          <text x="207" y="175" font-size="9" fill="#9ca3af" text-anchor="middle">May 24, 2026</text>
+          <text x="353" y="175" font-size="9" fill="#9ca3af" text-anchor="middle">Jun 24, 2026</text>
+          <text x="500" y="175" font-size="9" fill="#9ca3af" text-anchor="middle">Jul 24, 2026</text>
+        </svg>
+        <div class="pp-forecast-legend">
+          <div class="pp-legend-item"><div class="pp-legend-dot-high"></div> Highest</div>
+          <div class="pp-legend-item"><div class="pp-legend-dot-low"></div> Lowest</div>
+        </div>
+        <table style="width:100%;font-size:11px;margin-top:10px;border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:4px 6px;color:#6b7280;font-weight:500;border-bottom:1px solid #e5e7eb;"></th>
+              <th style="text-align:center;padding:4px 6px;color:#6b7280;font-weight:500;border-bottom:1px solid #e5e7eb;">Today</th>
+              <th style="text-align:center;padding:4px 6px;color:#6b7280;font-weight:500;border-bottom:1px solid #e5e7eb;">May 24, 2026</th>
+              <th style="text-align:center;padding:4px 6px;color:#6b7280;font-weight:500;border-bottom:1px solid #e5e7eb;">Jun 24, 2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:4px 6px;color:#1d4ed8;font-weight:600;">&#9650; Highest</td>
+              <td style="text-align:center;padding:4px 6px;color:#111;font-weight:600;">$29,437</td>
+              <td style="text-align:center;padding:4px 6px;color:#111;">$29,204</td>
+              <td style="text-align:center;padding:4px 6px;color:#111;">$28,970</td>
+            </tr>
+            <tr>
+              <td style="padding:4px 6px;color:#93c5fd;font-weight:600;">&#9660; Lowest</td>
+              <td style="text-align:center;padding:4px 6px;color:#111;font-weight:600;">$29,203</td>
+              <td style="text-align:center;padding:4px 6px;color:#111;">$27,812</td>
+              <td style="text-align:center;padding:4px 6px;color:#111;">$26,688</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:10px;color:#9ca3af;margin-top:8px;line-height:1.4;">AI-driven predictive pricing uses VIN details, inspection data, market trends, and economic factors to estimate vehicle value. Forecasts are statistical estimates and are not guarantees of actual market outcomes.</p>
+      </div>
+
+      <!-- Today's pricing -->
+      <div class="pp-today-section">
+        <div class="pp-today-title">Today's pricing</div>
+        <div class="pp-today-current">Current <strong>$29,665</strong></div>
+        <div class="pp-today-bar-wrap">
+          <div class="pp-today-bar">
+            <div class="pp-today-marker" style="left:48.6%"></div>
+          </div>
+        </div>
+        <div class="pp-today-range"><span>Low &nbsp; $27,928</span><span>High &nbsp; $31,504</span></div>
+      </div>
+
+      <!-- Similar units -->
+      <div class="pp-similar-title">Similar units recently sold on OPENLANE</div>
+      <div class="pp-similar-sub">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="5" width="12" height="7" rx="1" stroke="#9ca3af" stroke-width="1.2"/><path d="M3 5V3.5a4 4 0 018 0V5" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Based on 3,849 dealer wholesale sales in the last 3 months
+      </div>
       <table class="comp-table">
         <thead><tr><th>Vehicle</th><th>Major Inspection Issues</th><th>AutoCheck</th><th>Transaction date</th><th>Price</th></tr></thead>
         <tbody>
           <tr>
-            <td><div class="ct-vehicle">2015 Jeep Grand Cherokee Limited</div><div class="ct-details">RWD 77.4k km</div></td>
+            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 km &middot; Houston, TX</div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
-            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 02, 2026</td>
             <td class="ct-price">$26,900</td>
           </tr>
           <tr>
-            <td><div class="ct-vehicle">2015 Jeep Grand Cherokee Limited</div><div class="ct-details">RWD 115.6k km</div></td>
+            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">7,964 km &middot; Santa Rosa, CA</div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
             <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
             <td>April 17, 2026</td>
             <td class="ct-price">$26,700</td>
           </tr>
           <tr>
-            <td><div class="ct-vehicle">2015 Jeep Grand Cherokee Limited</div><div class="ct-details">RWD 116.75k km</div></td>
+            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">11,758 mi &middot; Riverside, CA</div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
-            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 21, 2026</td>
             <td class="ct-price">$28,900</td>
           </tr>
+          <tr>
+            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">77.4 km &middot; Scottsdale, AZ</div></td>
+            <td><span class="ct-ok">&#10003; No issues</span></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td>April 20, 2026</td>
+            <td class="ct-price">$29,200</td>
+          </tr>
+          <tr>
+            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">6,778 mi &middot; Huntington Beach, CA</div></td>
+            <td><span class="ct-ok">&#10003; No issues</span></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td>April 21, 2026</td>
+            <td class="ct-price">$29,000</td>
+          </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
+
+<!-- NOTE MODAL -->
+<div class="modal-overlay" id="noteModal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="modal-title">Note for 2024 Hyundai Ioniq 5 Limited</span>
+      <button class="modal-close" onclick="closeNoteModal()">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <textarea class="modal-textarea" style="height:120px;" placeholder=""></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cancel" onclick="closeNoteModal()">Cancel</button>
+      <button class="modal-submit">Save note</button>
     </div>
   </div>
 </div>

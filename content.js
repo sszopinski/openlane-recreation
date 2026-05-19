@@ -1,7 +1,7 @@
 // Waveform heights — anomaly positions at bars ~5, 25, 33 (approx 0:00, 0:19, 0:26)
 function makeWaveform() {
   const h = [10,14,20,16,10,28,32,24,18,14,20,26,30,28,22,18,24,30,34,32,26,22,18,14,18,36,32,28,24,22,18,14,24,36,30,24,18,14,10,12,16,20,24,22,18,14,10,8,10,14,18,22,20,16,12,8,6,8,10,12,10,8];
-  const anomaly = new Set([5,25,33]);
+  const anomaly = new Set([]);
   return h.map((v,i) => {
     const cls = 'wb' + (i < 18 ? ' p' : '') + (anomaly.has(i) ? ' anomaly' : '');
     return `<div class="${cls}" style="height:${v}px"></div>`;
@@ -34,7 +34,7 @@ document.getElementById('leftPanel').innerHTML = `
 
     <div class="vb-toggle" id="vbToggle">
       <span class="vb-icon">&#9889;</span>
-      <span style="font-size:11px;font-weight:600;color:#333;">Visual Boost AI</span>
+      <span style="font-size:11px;font-weight:600;color:#333;">Damage detection</span>
       <div class="vb-info">?</div>
       <div class="pill-toggle" id="vbPill"></div>
     </div>
@@ -63,8 +63,7 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Condition report header -->
   <div class="cr-top-bar">
     <div class="cr-score-badge">
-      <span class="cr-score-star">&#9733;</span>
-      <span class="cr-score-num">2.5</span>
+      <span class="cr-score-num">4.7</span>
     </div>
     <div class="cr-title-group">
       <div class="cr-title">Condition report</div>
@@ -81,7 +80,7 @@ document.getElementById('leftPanel').innerHTML = `
 
   <!-- Optional equipment -->
   <div class="opt-equip-row">
-    <div class="oe-val">Optional equipment value $3,190</div>
+    <div class="oe-val">Optional equipment value $4,745</div>
     <div class="oe-link">View window sticker &#8599;</div>
   </div>
 
@@ -107,8 +106,9 @@ document.getElementById('leftPanel').innerHTML = `
         <span style="font-size:12px;font-weight:600;color:#333;">Audio Boost AI</span>
         <span class="audio-boost-badge">AI-powered</span>
       </div>
+      <div class="ai-ok-banner">Our AI-powered analysis of the engine audio suggests no engine issues.</div>
       <div class="wave-vehicle-row">
-        <span class="wave-vehicle-lbl">2015 Jeep Grand Cherokee Limited</span>
+        <span class="wave-vehicle-lbl">2024 Hyundai Ioniq 5 Limited</span>
         <span class="wave-play-sample" id="compareSampleBtn">&#9654; Compare to normal</span>
       </div>
       <div class="wave-row">
@@ -117,14 +117,9 @@ document.getElementById('leftPanel').innerHTML = `
           <div class="waveform" id="waveform">${makeWaveform()}</div>
         </div>
       </div>
-      <div class="anomaly-markers">
-        <div class="anomaly-marker"><div class="anomaly-dot"></div>Anomaly detected 0:00</div>
-        <div class="anomaly-marker"><div class="anomaly-dot"></div>Anomaly detected 0:19</div>
-        <div class="anomaly-marker"><div class="anomaly-dot"></div>Anomaly detected 0:26</div>
-      </div>
       <div class="check-list">
-        <div class="ci"><div class="ci-dot warn">&#9888;</div><div class="ci-lbl">Upper end engine noise</div><div class="ci-val" style="color:#e65100;font-size:11px;">Engine noise present</div></div>
-        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Lower end engine noise</div><div class="ci-val" style="color:#15803d;font-size:11px;">As Described</div></div>
+        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Lower end engine noise</div></div>
+        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Upper end engine noise</div></div>
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Head gasket condition</div><div class="ci-chevron">&#9660;</div></div>
       </div>
     </div>
@@ -161,7 +156,7 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- OBD scan with Code Boost IQ -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-sec-title">OBD scan with Code Boost IQ</div>
+      <div class="cr-sec-title">OBD2 decoder</div>
     </div>
     <div class="cr-sec-body">
       <div class="obd-ok-banner">
@@ -194,27 +189,27 @@ document.getElementById('leftPanel').innerHTML = `
       <div class="warn-banner"><span class="warn-tri">&#9888;</span> Exterior damage</div>
       <div class="dmg-grid">
         <div class="dmg-item">
-          <div class="dmg-photo"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
           <div class="dmg-label">Front bumper</div>
           <div class="dmg-type">Other</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
           <div class="dmg-label">Hood</div>
           <div class="dmg-type">Scratch</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
           <div class="dmg-label">Passenger front fender</div>
           <div class="dmg-type">Scratch</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:top;"></div>
           <div class="dmg-label">Rear bumper</div>
           <div class="dmg-type">Other</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:bottom;"></div>
           <div class="dmg-label">Driver front fender</div>
           <div class="dmg-type">Scratch</div>
         </div>
@@ -377,60 +372,55 @@ document.getElementById('rightSidebar').innerHTML = `
   <!-- Vehicle title -->
   <div class="sb">
     <div class="sb-title-row">
-      <div class="sb-title">2015 Jeep Grand Cherokee Limited</div>
+      <div class="sb-title">2024 Hyundai Ioniq 5 Limited</div>
       <span class="sb-chevron">&#9660;</span>
     </div>
     <div class="sb-vin-row">
-      <span class="sb-miles">116,750 miles</span>
+      <span class="sb-miles">7,757 miles</span>
       <span class="sb-sep">|</span>
-      <span class="sb-vin">VIN 1C4RJEBG4FC753482</span>
+      <span class="sb-vin">VIN KM8KRADE3NU266172</span>
       <span class="sb-ico" title="Copy">&#10697;</span>
       <span class="sb-ico" title="Photos">&#128247;</span>
     </div>
     <div class="sb-meta">
       <div class="sb-row">
         <span class="ico ico-gray">&#128197;</span>
-        Published on Apr 23 at 7:11 pm
+        Published on Apr 24 at 9:53 am
       </div>
       <div class="sb-row">
         <span class="ico ico-warn">&#9888;</span>
-        Expires on Apr 25 at 9:59 pm
+        Expires today at 3:00 pm
       </div>
       <div class="sb-row">
         <span class="ico ico-blue">&#8226;</span>
-        2 interested
+        3 interested
+      </div>
+      <div class="sb-row">
+        <span class="ico" style="color:#f59e0b;">&#9888;</span>
+        Buyer has title to send
       </div>
       <div class="sb-row">
         <span class="ico ico-ok">&#10003;</span>
-        As Described Guarantee available
+        Buyback Guarantee Included
+      </div>
+      <div class="sb-row">
+        <span class="ico ico-ok">&#9679;</span>
+        Starting @ floor
       </div>
     </div>
 
     <div class="pills">
-      <div class="pill">4WD</div>
+      <div class="pill">RWD</div>
       <div class="pill">Automatic</div>
-      <div class="pill">Gas</div>
-      <div class="pill">3.6L V6</div>
+      <div class="pill">Electric</div>
+      <div class="pill">77.4 kWh Elect</div>
     </div>
 
     <div class="feat-list">
-      <div class="feat-row">
-        <span class="feat-dot">&#8226;</span>
-        <span class="feat-lnk">Window Sticker</span>
-        <span class="feat-ext">&#8599;</span>
-      </div>
-      <div class="feat-row">
-        <span class="feat-dot">&#8226;</span> Backup camera
-      </div>
-      <div class="feat-row">
-        <span class="feat-dot">&#8226;</span> Heated/Ventilated seats
-      </div>
-      <div class="feat-row">
-        <span class="feat-dot">&#8226;</span> Navigation system
-      </div>
-      <div class="feat-row">
-        <span class="feat-dot">&#8226;</span> Power sunroof
-      </div>
+      <div class="feat-row"><span class="feat-dot">&#8226;</span> 1 key</div>
+      <div class="feat-row"><span class="feat-dot">&#8226;</span> Navigation</div>
+      <div class="feat-row"><span class="feat-dot">&#8226;</span> Power seats</div>
+      <div class="feat-row"><span class="feat-dot">&#8226;</span> Leather</div>
     </div>
   </div>
 
@@ -441,59 +431,56 @@ document.getElementById('rightSidebar').innerHTML = `
       <div class="bb-range">
         <div class="bb-col">
           <span class="bb-lbl">Rough value</span>
-          <span class="bb-val">$7,025</span>
+          <span class="bb-val">$25,714</span>
         </div>
         <div class="bb-dash">&mdash;</div>
         <div class="bb-col">
           <span class="bb-lbl">Average value</span>
-          <span class="bb-val">$8,650</span>
+          <span class="bb-val">$33,540</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- OPENLANE Market Data -->
+  <!-- OPENLANE Predictive Pricing -->
   <div class="sb">
-    <div class="omd-header">
-      <span class="omd-badge">OL</span>
-      <span class="omd-title">OPENLANE Market Data</span>
-      <span class="omd-info">&#9432;</span>
-      <a class="omd-report" id="viewMarketReport">View full report &#8599;</a>
+    <div class="pp-header">
+      <span class="pp-star">&#10022;</span>
+      <span class="pp-title">OPENLANE Predictive Pricing</span>
+      <span class="pp-beta">beta</span>
+      <button class="pp-forecast-btn" id="viewForecastBtn">View forecast</button>
     </div>
-    <p style="font-size:11px;color:#888;margin-bottom:10px;">Based on 8,206 dealer wholesale sales in the last 3 months</p>
-    <div class="omd-grid">
-      <div class="omd-col low">
-        <div class="omd-col-label">Lowest</div>
-        <div class="omd-col-val">$4,500</div>
-      </div>
-      <div class="omd-col avg">
-        <div class="omd-col-label">Average</div>
-        <div class="omd-col-val">$8,560</div>
-      </div>
-      <div class="omd-col high">
-        <div class="omd-col-label">Highest</div>
-        <div class="omd-col-val">$10,700</div>
-      </div>
+    <div class="pp-current-row">
+      <span class="pp-current-label">Current</span>
+      <span class="pp-current-val">$29,665</span>
     </div>
-    <div class="omd-similar">
-      <span class="omd-car-icon">&#128663;</span>
-      3 similar units recently sold on OPENLANE
+    <div class="pp-bar-wrap">
+      <div class="pp-bar">
+        <div class="pp-marker" style="left:48.6%"></div>
+      </div>
+      <div class="pp-range-labels">
+        <div class="pp-range-low"><div class="pp-range-word">Low</div><div class="pp-range-num">$27,928</div></div>
+        <div class="pp-range-high"><div class="pp-range-word">High</div><div class="pp-range-num">$31,504</div></div>
+      </div>
     </div>
   </div>
 
   <!-- AutoCheck -->
   <div class="sb">
     <div class="ac-hd">
-      <div class="ac-logo-box">A</div>
-      <div class="ac-text">
-        <div class="ac-name">AutoCheck</div>
-        <div class="ac-exp">a part of Experian</div>
+      <div class="ac-logo">
+        <svg width="60" height="22" viewBox="0 0 120 40" fill="none">
+          <path d="M18 6C10 6 4 12 4 20s6 14 14 14 14-6 14-14S26 6 18 6z" fill="#003087"/>
+          <path d="M10 20l6 6 10-12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="36" y="26" font-family="Arial" font-weight="700" font-size="16" fill="#003087">AutoCheck</text>
+          <text x="36" y="36" font-family="Arial" font-size="9" fill="#999">a part of Experian</text>
+        </svg>
       </div>
       <a class="ac-report-lnk" id="viewFullReport">View full report</a>
     </div>
     <div class="ac-counts">
-      <div class="ac-count"><strong>3</strong> Owner(s)</div>
-      <div class="ac-count"><strong>2</strong> Accident(s)</div>
+      <div class="ac-count"><strong>0</strong> Owner(s)</div>
+      <div class="ac-count"><strong>0</strong> Accident(s)</div>
     </div>
     <div class="ac-checks">
       <div class="ac-chk"><span class="ok">&#10003;</span> Title/Problems</div>
@@ -519,24 +506,12 @@ document.getElementById('rightSidebar').innerHTML = `
   <!-- Dealer -->
   <div class="sb">
     <div class="dealer-hd">
-      <div class="dealer-logo">HB<br>CHRYS<br>JEEP</div>
+      <div class="dealer-logo">HMF</div>
       <div class="dealer-info">
-        <div class="dealer-name">Huntington Beach Chrysler Jeep Ram</div>
-        <div class="dealer-loc">&#128205; Huntington Beach, CA</div>
+        <div class="dealer-name">Hyundai Motor Finance</div>
+        <div class="dealer-loc">&#128205; Houston, TX</div>
       </div>
     </div>
-    <div class="dealer-stats">
-      <div class="d-stat">&#128202; 38%</div>
-      <div class="d-stat">&#128203; 11.0 days</div>
-      <div class="d-stat">&#128336; 2 days</div>
-    </div>
-    <div class="oi-line">
-      <span class="oi-powered">powered by</span>
-      <span class="oi-box">OI</span>
-      <span class="oi-name">OPENLANE Intelligence</span>
-    </div>
-    <div class="dealer-desc">
-      OPENLANE Intelligence uses AI-driven technology to enhance our condition reports with more accurate, consistent and reliable vehicle data. AI powers exterior damage detection, OBD scanning, engine audio analysis, and market data models.
-    </div>
+    <button class="follow-btn">Follow +</button>
   </div>
 `;

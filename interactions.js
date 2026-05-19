@@ -39,7 +39,7 @@
     if (pill) pill.classList.toggle('off', !on);
     const label = document.getElementById('vbLabel');
     if (label) {
-      label.textContent = on ? 'Visual Boost AI: ON' : 'Visual Boost AI: OFF';
+      label.textContent = on ? 'Damage detection: ON' : 'Damage detection: OFF';
       label.classList.toggle('show', on);
     }
     const overlay = document.getElementById('vbOverlay');
@@ -123,6 +123,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     closeBidModal();
     closeMarketModal();
+    closeNoteModal();
   }
 });
 
@@ -135,16 +136,29 @@ function closeMarketModal() {
 }
 
 document.addEventListener('click', function(e) {
-  if (e.target.closest('#viewMarketReport') || e.target.closest('#viewFullReport')) {
+  if (e.target.closest('#viewForecastBtn')) {
     e.preventDefault();
     openMarketModal();
   }
   if (e.target.id === 'marketModal') closeMarketModal();
 });
 
+// ── Note modal ────────────────────────────────────────────────────────────────
+function openNoteModal() {
+  document.getElementById('noteModal').style.display = 'flex';
+}
+function closeNoteModal() {
+  document.getElementById('noteModal').style.display = 'none';
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.closest('#notesBtn')) openNoteModal();
+  if (e.target.id === 'noteModal') closeNoteModal();
+});
+
 // ── Nav countdown timer ───────────────────────────────────────────────────────
 (function() {
-  let total = 18 * 3600 + 10 * 60 + 17;
+  let total = 2 * 3600 + 49 * 60 + 17;
   const el = document.getElementById('navTimer');
   if (!el) return;
 
@@ -156,7 +170,7 @@ document.addEventListener('click', function(e) {
     const h = Math.floor(total / 3600);
     const m = Math.floor((total % 3600) / 60);
     const s = total % 60;
-    el.textContent = `Starts in ${h}:${pad(m)}:${pad(s)}`;
+    el.textContent = `Ends in ${pad(h)}:${pad(m)}:${pad(s)}`;
     setTimeout(tick, 1000);
   }
   setTimeout(tick, 1000);
