@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2015 Jeep Grand Cherokee Limited — OPENLANE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav">
+  <div class="nav-logo">OPENLANE</div>
+  <div class="nav-tabs">
+    <div class="nav-tab active"><span class="tab-sub">Private</span>Marketplace</div>
+    <div class="nav-tab"><span class="tab-sub">Private</span>Auction</div>
+  </div>
+  <div class="nav-link">My purchases <span class="sup">▾</span></div>
+  <div class="nav-link">Transport <span class="sup">↗</span></div>
+  <div class="nav-link">Sell <span class="sup">▾</span></div>
+  <div class="nav-link">Sold vehicles</div>
+  <div class="nav-link">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <rect x="1" y="9" width="3" height="6" rx="1" fill="#888"/>
+      <rect x="6.5" y="5" width="3" height="10" rx="1" fill="#888"/>
+      <rect x="12" y="1" width="3" height="14" rx="1" fill="#888"/>
+    </svg>
+  </div>
+
+  <div class="nav-spacer"></div>
+
+  <div class="nav-timer" id="navTimer">Starts in 18:10:17</div>
+
+  <div class="nav-dealer-chip">
+    <div class="dealer-avatar">JG</div>
+    <div class="dealer-chip-name">Keffer Hyundai</div>
+    <span class="dealer-chip-caret">▾</span>
+  </div>
+
+  <div class="nav-action-btn">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+      <path d="M7 12S1.5 8 1.5 4.5a3.5 3.5 0 017 0 3.5 3.5 0 017 0C15.5 8 10 12 10 12" stroke-linecap="round"/>
+    </svg>
+    Watchlist
+  </div>
+  <div class="nav-action-btn">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+      <rect x="2" y="2" width="10" height="10" rx="1.5"/>
+      <line x1="4.5" y1="5" x2="9.5" y2="5"/>
+      <line x1="4.5" y1="7.5" x2="7.5" y2="7.5"/>
+    </svg>
+    Notes
+  </div>
+  <div class="nav-action-btn">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+      <path d="M2 4h10M9.5 9l2.5-2-2.5-2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="2" y1="8" x2="7" y2="8"/>
+    </svg>
+    Hide
+  </div>
+  <div class="nav-close-btn" onclick="window.history.back()">&#10005;</div>
+</nav>
+
+<!-- PAGE -->
+<div class="page-wrap">
+  <div class="left-panel" id="leftPanel"></div>
+  <div class="right-sidebar" id="rightSidebar"></div>
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="btm-bar">
+  <div class="btm-meta">
+    <span class="btm-label">Absolute sale</span>
+    <span class="btm-bids">16 Bids</span>
+  </div>
+  <div class="btm-bid-info">Top bid <strong>$5,400</strong></div>
+  <div class="btm-spacer"></div>
+  <button class="btm-bid-btn" id="bidBtn">Bid</button>
+</div>
+
+<!-- BID MODAL -->
+<div class="modal-overlay" id="bidModal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="modal-title">Bid</span>
+      <button class="modal-close" onclick="closeBidModal()">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-min-bid">Minimum bid is $5,400</p>
+      <div class="modal-field">
+        <label>Bid amount</label>
+        <div class="modal-input-wrap"><span class="modal-input-pre">$</span><input type="number" value="5400" class="modal-input"></div>
+      </div>
+      <div class="modal-field">
+        <label>Max Bid amount</label>
+        <div class="modal-input-wrap"><span class="modal-input-pre">$</span><input type="number" value="7000" class="modal-input"></div>
+      </div>
+      <div class="modal-field">
+        <label>Notes</label>
+        <textarea class="modal-textarea" placeholder=""></textarea>
+      </div>
+      <div class="modal-services">
+        <div class="modal-services-title">Services</div>
+        <div class="modal-service-row">
+          <span>As Described Guarantee <span class="svc-info">&#9432;</span></span>
+          <span class="svc-right"><span class="svc-price">$145</span><input type="checkbox" checked class="svc-check"></span>
+        </div>
+        <div class="modal-service-row sub">
+          <span>&#8627; Extended Guarantee <span class="svc-info">&#9432;</span></span>
+          <span class="svc-right"><span class="svc-price">$75</span><input type="checkbox" checked class="svc-check"></span>
+        </div>
+        <div class="modal-service-row">
+          <span>Transportation <span class="svc-info">&#9432;</span></span>
+          <span class="svc-right"><span class="svc-price">$1090</span><input type="checkbox" checked class="svc-check"></span>
+        </div>
+        <p class="modal-svc-note">Selections will apply to future bids on this vehicle.</p>
+      </div>
+      <div class="modal-payment">
+        <span class="modal-payment-label">Payment method <span style="color:#dc2626">*</span></span>
+        <button class="modal-add-payment">Add new payment method</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cancel" onclick="closeBidModal()">Cancel</button>
+      <button class="modal-submit">Submit bid</button>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET DATA MODAL -->
+<div class="modal-overlay" id="marketModal" style="display:none">
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <span class="modal-title">OPENLANE Market Data</span>
+      <button class="modal-close" onclick="closeMarketModal()">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:12px;color:#888;margin-bottom:14px;">Based on 8206 dealer wholesale sales in the last 3 months</p>
+      <div class="market-grid">
+        <div class="market-col low"><div class="mc-label">Lowest</div><div class="mc-val">$4,500</div></div>
+        <div class="market-col avg active"><div class="mc-label">Average</div><div class="mc-val">$8,560</div></div>
+        <div class="market-col high"><div class="mc-label">Highest</div><div class="mc-val">$10,700</div></div>
+      </div>
+      <div style="margin:18px 0 10px;font-size:13px;font-weight:600;">Similar units recently sold on OPENLANE</div>
+      <table class="comp-table">
+        <thead><tr><th>Vehicle</th><th>Major Inspection Issues</th><th>AutoCheck</th><th>Transaction date</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="ct-vehicle">2015 Jeep Grand Cherokee Limited</div><div class="ct-details">RWD 77.4k km</div></td>
+            <td><span class="ct-ok">&#10003; No issues</span></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td>April 02, 2026</td>
+            <td class="ct-price">$26,900</td>
+          </tr>
+          <tr>
+            <td><div class="ct-vehicle">2015 Jeep Grand Cherokee Limited</div><div class="ct-details">RWD 115.6k km</div></td>
+            <td><span class="ct-ok">&#10003; No issues</span></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td>April 17, 2026</td>
+            <td class="ct-price">$26,700</td>
+          </tr>
+          <tr>
+            <td><div class="ct-vehicle">2015 Jeep Grand Cherokee Limited</div><div class="ct-details">RWD 116.75k km</div></td>
+            <td><span class="ct-ok">&#10003; No issues</span></td>
+            <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer</div></td>
+            <td>April 21, 2026</td>
+            <td class="ct-price">$28,900</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="content.js"></script>
+<script src="interactions.js"></script>
+</body>
+</html>
