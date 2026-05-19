@@ -91,15 +91,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cr-score-star { font-size: 14px; }
 .cr-score-num { font-size: 14px; font-weight: 700; color: #e65100; }
 .cr-autograde { display: flex; align-items: center; gap: 5px; }
-.cr-ag-badge { background: #e8f0fe; color: #0052cc; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
-.cr-ag-about { font-size: 11px; color: #0052cc; cursor: pointer; }
+.cr-ag-badge, .cr-autograde-badge { background: #e8f0fe; color: #0052cc; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
+.cr-ag-about, .cr-autograde-about { font-size: 11px; color: #0052cc; cursor: pointer; }
+.cr-title-group { display: flex; flex-direction: column; gap: 3px; }
+.cr-title { font-size: 14px; font-weight: 700; color: #111; }
 .cr-warnings-toggle { margin-left: auto; display: flex; align-items: center; gap: 7px; font-size: 12px; color: #555; flex-shrink: 0; }
 .opt-equip-row { display: flex; align-items: center; padding: 13px 20px; border-bottom: 1px solid #efefef; }
 .oe-val { font-size: 14px; font-weight: 700; color: #111; }
 .oe-link { margin-left: auto; font-size: 12px; color: #0052cc; display: flex; align-items: center; gap: 3px; }
 .photo-gallery-strip { display: flex; gap: 3px; padding: 10px 20px; overflow-x: auto; border-bottom: 1px solid #efefef; scrollbar-width: none; }
 .photo-gallery-strip::-webkit-scrollbar { display: none; }
-.gal-thumb { flex-shrink: 0; width: 96px; height: 68px; border-radius: 4px; cursor: pointer; overflow: hidden; background: #ddd; }
+.gal-thumb { flex-shrink: 0; width: 96px; height: 68px; border-radius: 4px; cursor: pointer; overflow: hidden; background: #ddd; position: relative; }
 .gal-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .gal-thumb.more { position: relative; }
 .gal-more { position: absolute; inset: 0; background: rgba(0,0,0,.52); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 600; border-radius: 4px; }
@@ -142,6 +144,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .ci-dot.ok { background: #16a34a; color: #fff; }
 .ci-dot.warn { background: #f59e0b; color: #fff; }
 .ci-lbl { flex: 1; }
+.ci-chevron { color: #bbb; font-size: 10px; margin-left: auto; }
 .ci-tag { font-size: 10px; font-weight: 600; background: #f0f0f0; color: #555; border-radius: 10px; padding: 1px 7px; margin-left: 4px; }
 .ci-tag.ok-tag { background: #f0fdf4; color: #15803d; }
 .ci-val { font-size: 11px; color: #777; margin-left: auto; padding-left: 8px; }
@@ -161,7 +164,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .dmg-item { display: flex; flex-direction: column; gap: 3px; }
 .dmg-photo { width: 100px; height: 70px; background: #d0d0d0; border-radius: 4px; cursor: pointer; overflow: hidden; }
 .dmg-photo img { width: 100%; height: 100%; object-fit: cover; }
-.dmg-lbl { font-size: 10px; font-weight: 600; color: #333; }
+.dmg-lbl, .dmg-label { font-size: 10px; font-weight: 600; color: #333; }
 .dmg-type { font-size: 10px; color: #888; }
 
 /* Additional notes */
@@ -218,7 +221,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .bb-card { display: flex; align-items: center; gap: 10px; }
 .bb-logo { background: #111; color: #fff; font-size: 8px; font-weight: 800; letter-spacing: 0.3px; padding: 3px 6px; border-radius: 3px; line-height: 1.4; text-align: center; flex-shrink: 0; }
 .bb-range { display: flex; align-items: center; gap: 8px; }
+.bb-col { display: flex; flex-direction: column; gap: 1px; }
+.bb-lbl { font-size: 10px; color: #888; }
 .bb-val { font-size: 14px; font-weight: 700; color: #111; }
+.bb-dash { font-size: 14px; color: #bbb; padding: 0 2px; }
 .bb-sep2 { color: #bbb; }
 
 /* OPENLANE Market Data */
