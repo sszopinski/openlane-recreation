@@ -132,9 +132,9 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Vehicle operation</div></div>
@@ -183,10 +183,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"><div class="pg-overlay">+2 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+2 more</div></div>
       </div>
       <div class="warn-banner"><span class="warn-tri">&#9888;</span> Exterior damage</div>
       <div class="dmg-grid">
@@ -231,10 +231,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Frame damage</div></div>
@@ -250,10 +250,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"><div class="pg-overlay">+6 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+6 more</div></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Driver front tire depth</div><div class="ci-val">7/32&quot;</div></div>
@@ -276,10 +276,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"></div>
-        <div class="pg-t"><div class="pg-overlay">+1 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+1 more</div></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Interior damage</div></div>
