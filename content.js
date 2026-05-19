@@ -88,7 +88,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Photo gallery -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Photo gallery</div>
     </div>
     <div class="photo-gallery-strip">
@@ -99,7 +98,7 @@ document.getElementById('leftPanel').innerHTML = `
 
   <!-- Engine analysis / Audio Boost AI -->
   <div class="cr-section">
-    <div class="cr-sec-header">
+    <div class="cr-sec-header expandable">
       <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Engine analysis</div>
     </div>
@@ -134,7 +133,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Mechanical -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Mechanical</div>
     </div>
     <div class="cr-sec-body">
@@ -163,7 +161,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- OBD scan with Code Boost IQ -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">OBD scan with Code Boost IQ</div>
     </div>
     <div class="cr-sec-body">
@@ -185,7 +182,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Exterior -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Exterior</div>
     </div>
     <div class="cr-sec-body">
@@ -233,7 +229,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Frame & underbody -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Frame &amp; underbody</div>
     </div>
     <div class="cr-sec-body">
@@ -252,7 +247,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Tires & wheels -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Tires &amp; wheels</div>
     </div>
     <div class="cr-sec-body">
@@ -263,10 +257,10 @@ document.getElementById('leftPanel').innerHTML = `
         <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+6 more</div></div>
       </div>
       <div class="check-list">
-        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Driver front tire depth</div><div class="ci-val">7/32&quot;</div></div>
-        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Passenger front tire depth</div><div class="ci-val">7/32&quot;</div></div>
-        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Driver rear tire depth</div><div class="ci-val">6/32&quot;</div></div>
-        <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Passenger rear tire depth</div><div class="ci-val">7/32&quot;</div></div>
+        <div class="ci ci-stacked"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl-group"><div class="ci-lbl">Driver front tire depth</div><div class="ci-sub">7/32&quot;</div></div></div>
+        <div class="ci ci-stacked"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl-group"><div class="ci-lbl">Passenger front tire depth</div><div class="ci-sub">7/32&quot;</div></div></div>
+        <div class="ci ci-stacked"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl-group"><div class="ci-lbl">Driver rear tire depth</div><div class="ci-sub">6/32&quot;</div></div></div>
+        <div class="ci ci-stacked"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl-group"><div class="ci-lbl">Passenger rear tire depth</div><div class="ci-sub">7/32&quot;</div></div></div>
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Driver front wheel</div></div>
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Passenger front wheel</div></div>
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Driver rear wheel</div></div>
@@ -278,7 +272,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Interior -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Interior</div>
     </div>
     <div class="cr-sec-body">
@@ -300,7 +293,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Major power options -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Major power options</div>
     </div>
     <div class="cr-sec-body">
@@ -316,7 +308,6 @@ document.getElementById('leftPanel').innerHTML = `
   <!-- Test drive -->
   <div class="cr-section">
     <div class="cr-sec-header">
-      <div class="cr-plus-btn">+</div>
       <div class="cr-sec-title">Test drive</div>
     </div>
     <div class="cr-sec-body">
