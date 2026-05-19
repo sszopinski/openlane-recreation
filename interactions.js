@@ -23,8 +23,8 @@
     if (e.target.closest('#carouselNext')) showPhoto(current + 1);
     const thumb = e.target.closest('.c-thumb');
     if (thumb) {
-      const idx = parseInt(thumb.dataset.idx, 10);
-      if (!isNaN(idx) && idx < photos.length) showPhoto(idx);
+      const idx = Number.parseInt(thumb.dataset.idx, 10);
+      if (!Number.isNaN(idx) && idx < photos.length) showPhoto(idx);
     }
   });
 })();
@@ -42,6 +42,8 @@
       label.textContent = on ? 'Visual Boost AI: ON' : 'Visual Boost AI: OFF';
       label.classList.toggle('show', on);
     }
+    const overlay = document.getElementById('vbOverlay');
+    if (overlay) overlay.classList.toggle('show', on);
   });
 })();
 

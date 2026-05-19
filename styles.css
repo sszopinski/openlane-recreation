@@ -69,6 +69,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .pill-toggle.off::after { left: 2px; }
 .vb-label { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); border-radius: 4px; padding: 3px 10px; font-size: 11px; color: #333; display: none; }
 .vb-label.show { display: block; }
+.vb-damage-overlay { position: absolute; inset: 0; pointer-events: none; display: none; }
+.vb-damage-overlay.show { display: block; }
+.vb-hotspot { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,20,147,0.55); border: 2px solid #ff1493; box-shadow: 0 0 8px rgba(255,20,147,0.7); }
+.vb-hotspot::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: rgba(255,20,147,0.3); }
 .c-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.88); display: flex; align-items: center; justify-content: center; font-size: 20px; color: #333; cursor: pointer; z-index: 10; box-shadow: 0 1px 5px rgba(0,0,0,.25); line-height: 1; }
 .c-nav.prev { left: 12px; }
 .c-nav.next { right: 12px; }
@@ -268,7 +272,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ── BOTTOM BAR ── */
 .btm-bar { position: fixed; bottom: 0; left: 0; right: 0; height: 52px; background: #fff; border-top: 1px solid #e0e0e0; display: flex; align-items: center; padding: 0 20px; gap: 14px; z-index: 200; }
 .btm-meta { display: flex; align-items: center; gap: 10px; }
-.btm-label { background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 5px; padding: 4px 10px; font-size: 12px; color: #555; font-weight: 500; }
+.btm-label { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 5px; padding: 4px 10px; font-size: 12px; color: #92400e; font-weight: 600; }
+/* As Described Guarantee section */
+.adg-section { padding: 16px 20px; border-top: 1px solid #efefef; }
+.adg-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.adg-icon { width: 28px; height: 28px; border-radius: 50%; background: #0052cc; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; flex-shrink: 0; }
+.adg-title { font-size: 13px; font-weight: 700; color: #111; }
+.adg-subtitle { font-size: 11px; color: #666; }
+.adg-coverage { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 10px 12px; margin-bottom: 10px; }
+.adg-coverage-title { font-size: 11px; font-weight: 600; color: #15803d; margin-bottom: 6px; }
+.adg-coverage-item { display: flex; align-items: flex-start; gap: 6px; font-size: 11px; color: #333; padding: 2px 0; }
+.adg-coverage-dot { color: #16a34a; flex-shrink: 0; font-size: 11px; }
+.adg-tiers { display: flex; gap: 8px; }
+.adg-tier { flex: 1; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 10px; text-align: center; }
+.adg-tier.selected { border-color: #0052cc; background: #eff6ff; }
+.adg-tier-name { font-size: 11px; font-weight: 600; color: #111; margin-bottom: 2px; }
+.adg-tier-days { font-size: 10px; color: #666; margin-bottom: 4px; }
+.adg-tier-price { font-size: 13px; font-weight: 700; color: #0052cc; }
+.adg-note { font-size: 10px; color: #888; margin-top: 8px; }
 .btm-bids { font-size: 12px; color: #777; }
 .btm-bid-info { font-size: 12px; color: #555; }
 .btm-bid-info strong { font-size: 15px; color: #111; font-weight: 700; }

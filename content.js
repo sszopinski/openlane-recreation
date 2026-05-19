@@ -41,6 +41,13 @@ document.getElementById('leftPanel').innerHTML = `
 
     <div class="vb-label" id="vbLabel">Visual Boost AI: ON</div>
 
+    <div class="vb-damage-overlay" id="vbOverlay">
+      <div class="vb-hotspot" style="top:38%;left:16%;"></div>
+      <div class="vb-hotspot" style="top:54%;left:41%;"></div>
+      <div class="vb-hotspot" style="top:62%;left:65%;"></div>
+      <div class="vb-hotspot" style="top:28%;left:73%;"></div>
+    </div>
+
     <button class="c-nav prev" id="carouselPrev">&#8249;</button>
     <button class="c-nav next" id="carouselNext">&#8250;</button>
     <div class="c-counter" id="carouselCounter">1 / ${photos.length}</div>
@@ -103,7 +110,7 @@ document.getElementById('leftPanel').innerHTML = `
       </div>
       <div class="wave-vehicle-row">
         <span class="wave-vehicle-lbl">2015 Jeep Grand Cherokee Limited</span>
-        <span class="wave-play-sample">&#9654; Play sample</span>
+        <span class="wave-play-sample" id="compareSampleBtn">&#9654; Compare to normal</span>
       </div>
       <div class="wave-row">
         <button class="play-btn" id="playBtn">&#9654;</button>
@@ -326,6 +333,36 @@ document.getElementById('leftPanel').innerHTML = `
         <div class="add-notes-text">Test drive up to 26 mph and reached 3rd gear</div>
       </div>
     </div>
+  </div>
+
+  <!-- As Described Guarantee -->
+  <div class="adg-section">
+    <div class="adg-header">
+      <div class="adg-icon">&#10003;</div>
+      <div>
+        <div class="adg-title">As Described Guarantee</div>
+        <div class="adg-subtitle">94% of vehicles have some type of coverage</div>
+      </div>
+    </div>
+    <div class="adg-coverage">
+      <div class="adg-coverage-title">Coverage includes (vehicle under $6,000)</div>
+      <div class="adg-coverage-item"><span class="adg-coverage-dot">&#10003;</span> Engine noise &amp; head gasket leaks</div>
+      <div class="adg-coverage-item"><span class="adg-coverage-dot">&#10003;</span> Transmission issues</div>
+      <div class="adg-coverage-item"><span class="adg-coverage-dot">&#10003;</span> Transfer case &amp; differential problems</div>
+    </div>
+    <div class="adg-tiers">
+      <div class="adg-tier selected">
+        <div class="adg-tier-name">Standard</div>
+        <div class="adg-tier-days">7 days from purchase</div>
+        <div class="adg-tier-price">$145</div>
+      </div>
+      <div class="adg-tier">
+        <div class="adg-tier-name">Extended</div>
+        <div class="adg-tier-days">14 days from purchase</div>
+        <div class="adg-tier-price">$220</div>
+      </div>
+    </div>
+    <div class="adg-note">$300 deductible per arbitration claim. Selections apply to future bids on this vehicle.</div>
   </div>
 
   <!-- Inspector footer -->
