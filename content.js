@@ -26,6 +26,8 @@ const thumbSrcs = [
   'photos/thumb_06.jpg',
   'photos/thumb_07.jpg',
   'photos/thumb_08.jpg',
+  'photos/thumb_01.jpg',
+  'photos/thumb_02.jpg',
 ];
 
 // ===== LEFT PANEL =====
@@ -34,22 +36,6 @@ document.getElementById('leftPanel').innerHTML = `
 <div class="carousel-wrap">
   <div class="carousel-main" id="carouselMain">
     <img src="${photos[0]}" class="carousel-photo" id="carouselPhoto" alt="Vehicle photo">
-
-    <div class="vb-toggle" id="vbToggle">
-      <span class="vb-icon">&#9889;</span>
-      <span style="font-size:11px;font-weight:600;color:#333;">Damage detection</span>
-      <div class="vb-info">?</div>
-      <div class="pill-toggle" id="vbPill"></div>
-    </div>
-
-    <div class="vb-label" id="vbLabel">Visual Boost AI: ON</div>
-
-    <div class="vb-damage-overlay" id="vbOverlay">
-      <div class="vb-hotspot" style="top:38%;left:16%;"></div>
-      <div class="vb-hotspot" style="top:54%;left:41%;"></div>
-      <div class="vb-hotspot" style="top:62%;left:65%;"></div>
-      <div class="vb-hotspot" style="top:28%;left:73%;"></div>
-    </div>
 
     <button class="c-nav prev" id="carouselPrev">&#8249;</button>
     <button class="c-nav next" id="carouselNext">&#8250;</button>
@@ -106,10 +92,7 @@ document.getElementById('leftPanel').innerHTML = `
       <div class="cr-sec-title">Engine analysis</div>
     </div>
     <div class="cr-sec-body">
-      <div class="audio-boost-header">
-        <span style="font-size:12px;font-weight:600;color:#333;">Audio Boost AI</span>
-        <span class="audio-boost-badge">AI-powered</span>
-      </div>
+      <div style="height:4px;"></div>
       <div class="ai-ok-banner">Our AI-powered analysis of the engine audio suggests no engine issues.</div>
       <div class="wave-vehicle-row">
         <span class="wave-vehicle-lbl">2024 Hyundai Ioniq 5 Limited</span>
@@ -159,21 +142,26 @@ document.getElementById('leftPanel').innerHTML = `
 
   <!-- OBD scan with Code Boost IQ -->
   <div class="cr-section">
-    <div class="cr-sec-header">
+    <div class="cr-sec-header" style="display:flex;align-items:center;gap:8px;">
+      <div class="obd-icon" style="width:16px;height:16px;background:#0052cc;border-radius:3px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:bold;">+</div>
       <div class="cr-sec-title">OBD2 decoder</div>
     </div>
     <div class="cr-sec-body">
-      <div class="obd-ok-banner">
-        <span>&#10003;</span> No trouble codes
+      <div style="font-size:12px;font-weight:600;color:#666;margin-bottom:8px;">Trouble Codes</div>
+      <div class="obd-header-gray">Confirmed</div>
+      <div class="obd-trouble-code">
+        <div class="obd-code-blue">P07E4-00</div>
+        <div class="obd-code-desc">Unable to Engage Park: No Sub Type Information</div>
       </div>
-      <div class="obd-label">Readiness Monitors</div>
+      
+      <div class="obd-header-gray" style="margin-top:14px;">Readiness Monitors</div>
       <div class="rd-list">
         <div class="rd"><div class="rd-name">EGR System</div><div class="rd-ok">complete</div></div>
         <div class="rd"><div class="rd-name">Oxygen Sensor Heater</div><div class="rd-ok">complete</div></div>
         <div class="rd"><div class="rd-name">Oxygen Sensor</div><div class="rd-ok">complete</div></div>
+        <div class="rd"><div class="rd-name">Secondary Air System</div><div class="rd-warn">unavailable</div></div>
         <div class="rd"><div class="rd-name">Evaporative System</div><div class="rd-ok">complete</div></div>
         <div class="rd"><div class="rd-name">Catalyst</div><div class="rd-ok">complete</div></div>
-        <div class="rd"><div class="rd-name">Secondary Air System</div><div class="rd-warn">unavailable</div></div>
       </div>
     </div>
   </div>
@@ -377,7 +365,7 @@ document.getElementById('rightSidebar').innerHTML = `
   <div class="sb">
     <div class="sb-title-row">
       <div class="sb-title">2024 Hyundai Ioniq 5 Limited</div>
-      <span class="sb-chevron">&#9660;</span>
+      <span class="sb-chevron" style="display:flex;align-items:center;color:#888;margin-left:auto;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </div>
     <div class="sb-vin-row">
       <span class="sb-miles">7,757 miles</span>

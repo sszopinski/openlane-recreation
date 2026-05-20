@@ -32,23 +32,7 @@
   });
 })();
 
-// ── Visual Boost AI toggle ────────────────────────────────────────────────────
-(function() {
-  let on = false;
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('#vbToggle')) return;
-    on = !on;
-    const pill = document.getElementById('vbPill');
-    if (pill) pill.classList.toggle('off', !on);
-    const label = document.getElementById('vbLabel');
-    if (label) {
-      label.textContent = on ? 'Damage detection: ON' : 'Damage detection: OFF';
-      label.classList.toggle('show', on);
-    }
-    const overlay = document.getElementById('vbOverlay');
-    if (overlay) overlay.classList.toggle('show', on);
-  });
-})();
+// ── Visual Boost AI toggle — Removed (Audit Refinement) ───────────────────────
 
 // ── Show warnings only toggle ─────────────────────────────────────────────────
 (function() {
