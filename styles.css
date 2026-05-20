@@ -36,9 +36,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .ctrl-btn {
   display: flex; align-items: center; gap: 5px; padding: 0 13px;
   font-size: 12px; color: #444; cursor: pointer; height: 100%;
-  border-left: 1px solid #f0f0f0; white-space: nowrap; background: none;
+  white-space: nowrap; background: none;
 }
-.ctrl-btn:hover { color: #0052cc; background: #f8faff; }
+.ctrl-btn:hover { color: #0052cc; }
+.ctrl-pill {
+  padding: 5px 12px; height: auto; margin: auto 5px;
+  border: 1px solid #d0d5dd; border-radius: 20px;
+  font-size: 12px; font-weight: 500; color: #333; background: #fff;
+  display: flex; align-items: center; gap: 5px; cursor: pointer;
+}
+.ctrl-pill:hover { border-color: #0052cc; color: #0052cc; }
 .nav-dealer-chip {
   display: flex; align-items: center; gap: 5px;
   background: #fdf5e8; border: 1px solid #e8d4a8; border-radius: 5px;
@@ -52,6 +59,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-action-btn:hover { color: #0052cc; background: #f8faff; }
 .nav-close-btn { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; color: #888; cursor: pointer; font-size: 16px; border-radius: 4px; margin-left: 2px; flex-shrink: 0; }
 .nav-close-btn:hover { background: #f5f5f5; color: #333; }
+.nav-icon-btn { display: flex; align-items: center; justify-content: center; position: relative; width: 34px; height: 100%; cursor: pointer; color: #555; flex-shrink: 0; }
+.nav-icon-btn:hover { color: #0052cc; }
+.nav-notif-badge { position: absolute; top: 6px; right: 2px; background: #e53e3e; color: #fff; font-size: 8px; font-weight: 700; border-radius: 8px; padding: 1px 3px; line-height: 1.2; pointer-events: none; }
 
 /* ── LAYOUT ── */
 .page-wrap { margin-top: 80px; display: flex; align-items: flex-start; }
@@ -99,12 +109,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ── CONDITION REPORT ── */
 .cr-outer { background: #fff; }
 .cr-top-bar { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-bottom: 1px solid #efefef; }
-.cr-score-badge { display: flex; align-items: center; gap: 5px; background: #fff3e0; border: 1px solid #ffcc80; border-radius: 20px; padding: 4px 10px 4px 8px; flex-shrink: 0; }
-.cr-score-star { font-size: 14px; }
-.cr-score-num { font-size: 14px; font-weight: 700; color: #e65100; }
+.cr-score-badge { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1.5px solid #555; border-radius: 50%; flex-shrink: 0; }
+.cr-score-num { font-size: 13px; font-weight: 700; color: #333; }
 .cr-autograde { display: flex; align-items: center; gap: 5px; }
-.cr-ag-badge, .cr-autograde-badge { background: #e8f0fe; color: #0052cc; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
-.cr-ag-about, .cr-autograde-about { font-size: 11px; color: #0052cc; cursor: pointer; }
+.cr-ag-badge, .cr-autograde-badge { font-size: 14px; font-weight: 600; color: #333; background: none; padding: 0; }
+.cr-ag-about, .cr-autograde-about { font-size: 11px; color: #888; cursor: pointer; }
 .cr-title-group { display: flex; flex-direction: column; gap: 3px; }
 .cr-title { font-size: 14px; font-weight: 700; color: #111; }
 .cr-warnings-toggle { margin-left: auto; display: flex; align-items: center; gap: 7px; font-size: 12px; color: #555; flex-shrink: 0; }

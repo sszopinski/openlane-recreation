@@ -54,15 +54,13 @@ document.getElementById('leftPanel').innerHTML = `
 
   <!-- Condition report header -->
   <div class="cr-top-bar">
+    <div class="cr-title">Condition report</div>
     <div class="cr-score-badge">
       <span class="cr-score-num">4.7</span>
     </div>
-    <div class="cr-title-group">
-      <div class="cr-title">Condition report</div>
-      <div class="cr-autograde">
-        <div class="cr-autograde-badge">AutoGrade</div>
-        <span class="cr-autograde-about">About AutoGrade</span>
-      </div>
+    <div class="cr-autograde">
+      <div class="cr-autograde-badge">Auto<span style="color:#1a73e8;font-weight:800;">G</span>rade</div>
+      <span class="cr-autograde-about">About AutoGrade</span>
     </div>
     <div class="cr-warnings-toggle">
       Show warnings only
@@ -374,8 +372,8 @@ document.getElementById('rightSidebar').innerHTML = `
       <span class="sb-miles">7,757 miles</span>
       <span class="sb-sep">|</span>
       <span class="sb-vin">VIN KM8KR4DE1RU266172</span>
-      <span class="sb-ico" title="Copy">&#10697;</span>
-      <span class="sb-ico" title="Photos">&#128247;</span>
+      <span class="sb-ico" title="Scan barcode"><svg viewBox="0 0 16 14" width="16" height="12" fill="currentColor"><rect x="0" y="0" width="1.5" height="14"/><rect x="3" y="0" width="1" height="14"/><rect x="5.5" y="0" width="2" height="14"/><rect x="9" y="0" width="1" height="14"/><rect x="11.5" y="0" width="1" height="14"/><rect x="14" y="0" width="2" height="14"/></svg></span>
+      <span class="sb-ico" title="Copy VIN"><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="8" height="9" rx="1.2"/><path d="M2 10V2h8" stroke-linecap="round"/></svg></span>
     </div>
     <div class="sb-meta">
       <div class="sb-row">
@@ -383,7 +381,7 @@ document.getElementById('rightSidebar').innerHTML = `
         Published on Apr 24 at 9:53 am
       </div>
       <div class="sb-row">
-        <span class="ico ico-warn">&#9888;</span>
+        <span class="ico" style="color:#e53e3e;"><svg viewBox="0 0 14 14" width="13" height="13" fill="none"><circle cx="7" cy="7" r="6.2" fill="#e53e3e"/><line x1="7" y1="3.5" x2="7" y2="7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="7.5" x2="9.5" y2="9" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         Expires today at 01:00 pm
       </div>
       <div class="sb-row" style="color:#c0392b;">

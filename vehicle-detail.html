@@ -35,6 +35,17 @@
     <span class="dealer-chip-caret">▾</span>
   </div>
 
+  <div class="nav-icon-btn nav-alert-btn" title="Alerts">
+    <svg viewBox="0 0 18 18" width="18" height="18" fill="none"><circle cx="9" cy="9" r="8" fill="#e53e3e"/><text x="9" y="13" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="sans-serif">!</text></svg>
+  </div>
+  <div class="nav-icon-btn nav-notif-btn" title="Notifications">
+    <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 2a5 5 0 00-5 5v3l-1.5 2H15.5L14 10V7A5 5 0 009 2z" stroke-linecap="round"/><path d="M7.5 15.5a1.5 1.5 0 003 0" stroke-linecap="round"/></svg>
+    <span class="nav-notif-badge">99+</span>
+  </div>
+  <div class="nav-icon-btn" title="Cart">
+    <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 2h2l2.5 9h7l2-6H5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="15" r="1.2" fill="currentColor" stroke="none"/><circle cx="13" cy="15" r="1.2" fill="currentColor" stroke="none"/></svg>
+  </div>
+
   <div class="nav-close-btn" onclick="window.history.back()">&#10005;</div>
 </nav>
 
@@ -42,16 +53,16 @@
 <div class="controls-row">
   <span class="controls-timer" id="navTimer">Ends in 02:49:17</span>
   <div class="controls-actions">
-    <button class="ctrl-btn">
-      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M7 12S1.5 8 1.5 4.5a3.5 3.5 0 017 0 3.5 3.5 0 017 0C15.5 8 10 12 10 12" stroke-linecap="round"/></svg>
+    <button class="ctrl-btn ctrl-pill">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M7 12.5S1 8 1 4.5a4 4 0 018 0 4 4 0 018 0C17 8 11 12.5 11 12.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Watchlist
     </button>
-    <button class="ctrl-btn" id="notesBtn">
+    <button class="ctrl-btn ctrl-pill" id="notesBtn">
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="2" y="2" width="10" height="10" rx="1.5"/><line x1="4.5" y1="5" x2="9.5" y2="5"/><line x1="4.5" y1="7.5" x2="7.5" y2="7.5"/></svg>
       Notes
     </button>
-    <button class="ctrl-btn">
-      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M2 7c0-3 2-5 5-5s5 2 5 5-2 5-5 5-5-2-5-5z"/><line x1="7" y1="4" x2="7" y2="7"/><circle cx="7" cy="9.5" r=".6" fill="currentColor" stroke="none"/></svg>
+    <button class="ctrl-btn ctrl-pill">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><ellipse cx="7" cy="7" rx="5.5" ry="3.5"/><circle cx="7" cy="7" r="1.5"/><line x1="2" y1="2" x2="12" y2="12" stroke-linecap="round"/></svg>
       Hide
     </button>
   </div>
