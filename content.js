@@ -14,16 +14,8 @@ const photos = [
   'photos/photo_03.jpg',
 ];
 
-const thumbs = [
-  'photos/thumb_01.jpg',
-  'photos/thumb_02.jpg',
-  'photos/thumb_03.jpg',
-  'photos/thumb_04.jpg',
-  'photos/thumb_05.jpg',
-  'photos/thumb_06.jpg',
-  'photos/thumb_07.jpg',
-  'photos/thumb_08.jpg',
-];
+// Horizontal slices of photo_01 to simulate multiple angles
+const thumbPos = ['4%','16%','28%','40%','52%','64%','76%','90%'];
 
 // ===== LEFT PANEL =====
 document.getElementById('leftPanel').innerHTML = `
@@ -54,7 +46,7 @@ document.getElementById('leftPanel').innerHTML = `
   </div>
 
   <div class="thumb-strip" id="thumbStrip">
-    ${thumbs.map((src, i) => `<div class="c-thumb${i === 0 ? ' sel' : ''}" data-idx="${i}" style="background-image:url('${src}');background-size:cover;background-position:center;"></div>`).join('')}
+    ${thumbPos.map((pos, i) => `<div class="c-thumb${i === 0 ? ' sel' : ''}" data-idx="${i}" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:${pos} center;"></div>`).join('')}
   </div>
 </div>
 
@@ -90,8 +82,7 @@ document.getElementById('leftPanel').innerHTML = `
       <div class="cr-sec-title">Photo gallery</div>
     </div>
     <div class="photo-gallery-strip">
-      ${thumbs.slice(0,4).map(src => `<div class="gal-thumb" style="background-image:url('${src}');background-size:cover;background-position:center;"></div>`).join('')}
-      <div class="gal-thumb" style="background-image:url('${thumbs[4]}');background-size:cover;background-position:center;"><div class="gal-more">+15 more</div></div>
+      ${['0%','25%','50%','75%','100%'].map((pos, i) => `<div class="gal-thumb" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:${pos} center;">${i === 4 ? '<div class="gal-more">+15 more</div>' : ''}</div>`).join('')}
     </div>
   </div>
 
@@ -132,9 +123,9 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:10% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:45% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:80% center;"></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Vehicle operation</div></div>
@@ -181,35 +172,35 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+2 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:5% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:35% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:65% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:95% center;"><div class="pg-overlay">+2 more</div></div>
       </div>
       <div class="warn-banner"><span class="warn-tri">&#9888;</span> Exterior damage</div>
       <div class="dmg-grid">
         <div class="dmg-item">
-          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:8% center;"></div>
           <div class="dmg-label">Front bumper</div>
           <div class="dmg-type">Other</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:30% top;"></div>
           <div class="dmg-label">Hood</div>
           <div class="dmg-type">Scratch</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:55% center;"></div>
           <div class="dmg-label">Passenger front fender</div>
           <div class="dmg-type">Scratch</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:top;"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:80% center;"></div>
           <div class="dmg-label">Rear bumper</div>
           <div class="dmg-type">Other</div>
         </div>
         <div class="dmg-item">
-          <div class="dmg-photo" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:bottom;"></div>
+          <div class="dmg-photo" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:96% center;"></div>
           <div class="dmg-label">Driver front fender</div>
           <div class="dmg-type">Scratch</div>
         </div>
@@ -228,10 +219,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:0% bottom;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:33% bottom;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:67% bottom;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:100% bottom;"></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Frame damage</div></div>
@@ -246,10 +237,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+6 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:12% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:38% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:62% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:88% center;"><div class="pg-overlay">+6 more</div></div>
       </div>
       <div class="check-list">
         <div class="ci ci-stacked"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl-group"><div class="ci-lbl">Driver front tire depth</div><div class="ci-sub">7/32&quot;</div></div></div>
@@ -271,10 +262,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_02.jpg');background-size:cover;background-position:center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_03.jpg');background-size:cover;background-position:center;"><div class="pg-overlay">+1 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:20% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:44% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:70% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:92% center;"><div class="pg-overlay">+1 more</div></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Interior damage</div></div>
