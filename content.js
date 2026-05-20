@@ -373,7 +373,7 @@ document.getElementById('rightSidebar').innerHTML = `
     <div class="sb-vin-row">
       <span class="sb-miles">7,757 miles</span>
       <span class="sb-sep">|</span>
-      <span class="sb-vin">VIN KM8K6ADE3RU296172</span>
+      <span class="sb-vin">VIN KM8KR4DE1RU266172</span>
       <span class="sb-ico" title="Copy">&#10697;</span>
       <span class="sb-ico" title="Photos">&#128247;</span>
     </div>
@@ -386,12 +386,12 @@ document.getElementById('rightSidebar').innerHTML = `
         <span class="ico ico-warn">&#9888;</span>
         Expires today at 01:00 pm
       </div>
-      <div class="sb-row">
-        <span class="ico ico-blue">&#8226;</span>
+      <div class="sb-row" style="color:#c0392b;">
+        <span class="ico" style="color:#c0392b;">&#128293;</span>
         3 interested
       </div>
       <div class="sb-row">
-        <span class="ico" style="color:#f59e0b;">&#9888;</span>
+        <span class="ico" style="color:#555;">&#128196;</span>
         Seller has title in hand
       </div>
       <div class="sb-row">
@@ -411,7 +411,7 @@ document.getElementById('rightSidebar').innerHTML = `
       <div class="pill">77.4 kWh Elect</div>
     </div>
 
-    <div class="feat-list">
+    <div class="feat-list" style="display:grid;grid-template-columns:1fr 1fr;gap:2px 0;">
       <div class="feat-row"><span class="feat-dot">&#8226;</span> 1 key</div>
       <div class="feat-row"><span class="feat-dot">&#8226;</span> Navigation</div>
       <div class="feat-row"><span class="feat-dot">&#8226;</span> Power seats</div>
