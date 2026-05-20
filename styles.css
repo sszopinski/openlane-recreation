@@ -112,7 +112,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cr-score-badge { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1.5px solid #555; border-radius: 50%; flex-shrink: 0; }
 .cr-score-num { font-size: 13px; font-weight: 700; color: #333; }
 .cr-autograde { display: flex; align-items: center; gap: 5px; }
-.cr-ag-badge, .cr-autograde-badge { font-size: 14px; font-weight: 600; color: #333; background: none; padding: 0; }
+.cr-ag-badge, .cr-autograde-badge { font-size: 22px; font-weight: 700; color: #333; background: none; padding: 0; }
 .cr-ag-about, .cr-autograde-about { font-size: 11px; color: #888; cursor: pointer; }
 .cr-title-group { display: flex; flex-direction: column; gap: 3px; }
 .cr-title { font-size: 14px; font-weight: 700; color: #111; }
@@ -379,6 +379,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .ct-vehicle { font-weight: 600; color: #111; margin-bottom: 2px; }
 .ct-details { font-size: 11px; color: #888; }
 .ct-ok { color: #16a34a; }
+.ct-no-issues { display: inline-flex; align-items: center; gap: 4px; color: #16a34a; font-size: 12px; }
 .ct-ac { line-height: 1.8; }
 .ct-price { font-weight: 700; color: #111; white-space: nowrap; }
 
@@ -422,5 +423,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .pp-similar-sub { font-size: 11px; color: #888; margin-bottom: 12px; display: flex; align-items: center; gap: 5px; }
 
 /* ── DEALER FOLLOW BUTTON ── */
-.follow-btn { background: #0052cc; color: #fff; border-radius: 6px; padding: 6px 18px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; cursor: pointer; margin-top: 6px; }
-.follow-btn:hover { background: #003d99; }
+.follow-btn { background: #fff; color: #0052cc; border: 1.5px solid #0052cc; border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; cursor: pointer; margin-top: 6px; }
+.follow-btn:hover { background: #eff6ff; }
