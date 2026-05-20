@@ -2,6 +2,9 @@
 (function() {
   const photos = [
     'photos/photo_01.jpg',
+    'photos/insp_01.jpg',
+    'photos/insp_02.jpg',
+    'photos/insp_03.jpg',
     'photos/photo_02.jpg',
     'photos/photo_03.jpg',
   ];

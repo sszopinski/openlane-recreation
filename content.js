@@ -10,12 +10,23 @@ function makeWaveform() {
 
 const photos = [
   'photos/photo_01.jpg',
+  'photos/insp_01.jpg',
+  'photos/insp_02.jpg',
+  'photos/insp_03.jpg',
   'photos/photo_02.jpg',
   'photos/photo_03.jpg',
 ];
 
-// Horizontal slices of photo_01 focused on car body (left ~20% is dark background)
-const thumbPos = ['28%','38%','48%','58%','67%','76%','84%','92%'];
+const thumbSrcs = [
+  'photos/thumb_01.jpg',
+  'photos/thumb_02.jpg',
+  'photos/thumb_03.jpg',
+  'photos/thumb_04.jpg',
+  'photos/thumb_05.jpg',
+  'photos/thumb_06.jpg',
+  'photos/thumb_07.jpg',
+  'photos/thumb_08.jpg',
+];
 
 // ===== LEFT PANEL =====
 document.getElementById('leftPanel').innerHTML = `
@@ -46,7 +57,7 @@ document.getElementById('leftPanel').innerHTML = `
   </div>
 
   <div class="thumb-strip" id="thumbStrip">
-    ${thumbPos.map((pos, i) => `<div class="c-thumb${i === 0 ? ' sel' : ''}" data-idx="${i}" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:${pos} center;"></div>`).join('')}
+    ${thumbSrcs.map((src, i) => `<div class="c-thumb${i === 0 ? ' sel' : ''}" data-idx="${i}" style="background-image:url('${src}');background-size:cover;background-position:center center;"></div>`).join('')}
   </div>
 </div>
 
