@@ -399,8 +399,8 @@ document.getElementById('rightSidebar').innerHTML = `
         Buyback Guarantee Included
       </div>
       <div class="sb-row">
-        <span class="ico ico-ok">&#9679;</span>
-        Starting @ floor
+        <span class="ico ico-ok">&#10003;</span>
+        Starting bid = floor
       </div>
     </div>
 
@@ -423,17 +423,7 @@ document.getElementById('rightSidebar').innerHTML = `
   <div class="sb">
     <div class="bb-card">
       <div class="bb-logo">BLACK<br>BOOK</div>
-      <div class="bb-range">
-        <div class="bb-col">
-          <span class="bb-lbl">Rough value</span>
-          <span class="bb-val">$25,714</span>
-        </div>
-        <div class="bb-dash">&mdash;</div>
-        <div class="bb-col">
-          <span class="bb-lbl">Average value</span>
-          <span class="bb-val">$33,540</span>
-        </div>
-      </div>
+      <div class="bb-price-range">$25,714 - $33,540</div>
     </div>
   </div>
 
@@ -454,7 +444,7 @@ document.getElementById('rightSidebar').innerHTML = `
         <div class="pp-marker" style="left:48.6%"></div>
       </div>
       <div class="pp-range-labels">
-        <div class="pp-range-low"><div class="pp-range-word">Low</div><div class="pp-range-num">$27,928</div></div>
+        <div class="pp-range-low"><div class="pp-range-word">Low</div><div class="pp-range-num">$27,826</div></div>
         <div class="pp-range-high"><div class="pp-range-word">High</div><div class="pp-range-num">$31,504</div></div>
       </div>
     </div>

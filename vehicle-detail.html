@@ -29,37 +29,33 @@
 
   <div class="nav-spacer"></div>
 
-  <div class="nav-timer" id="navTimer">Ends in 02:49:17</div>
-
   <div class="nav-dealer-chip">
     <div class="dealer-avatar">HB</div>
     <div class="dealer-chip-name">Huntington Beach Chrysler Jeep Ram</div>
     <span class="dealer-chip-caret">▾</span>
   </div>
 
-  <div class="nav-action-btn">
-    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
-      <path d="M7 12S1.5 8 1.5 4.5a3.5 3.5 0 017 0 3.5 3.5 0 017 0C15.5 8 10 12 10 12" stroke-linecap="round"/>
-    </svg>
-    Watchlist
-  </div>
-  <div class="nav-action-btn" id="notesBtn">
-    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
-      <rect x="2" y="2" width="10" height="10" rx="1.5"/>
-      <line x1="4.5" y1="5" x2="9.5" y2="5"/>
-      <line x1="4.5" y1="7.5" x2="7.5" y2="7.5"/>
-    </svg>
-    Notes
-  </div>
-  <div class="nav-action-btn">
-    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
-      <path d="M2 4h10M9.5 9l2.5-2-2.5-2" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="2" y1="8" x2="7" y2="8"/>
-    </svg>
-    Hide
-  </div>
   <div class="nav-close-btn" onclick="window.history.back()">&#10005;</div>
 </nav>
+
+<!-- CONTROLS ROW -->
+<div class="controls-row">
+  <span class="controls-timer" id="navTimer">Ends in 02:49:17</span>
+  <div class="controls-actions">
+    <button class="ctrl-btn">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M7 12S1.5 8 1.5 4.5a3.5 3.5 0 017 0 3.5 3.5 0 017 0C15.5 8 10 12 10 12" stroke-linecap="round"/></svg>
+      Watchlist
+    </button>
+    <button class="ctrl-btn" id="notesBtn">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="2" y="2" width="10" height="10" rx="1.5"/><line x1="4.5" y1="5" x2="9.5" y2="5"/><line x1="4.5" y1="7.5" x2="7.5" y2="7.5"/></svg>
+      Notes
+    </button>
+    <button class="ctrl-btn">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M2 7c0-3 2-5 5-5s5 2 5 5-2 5-5 5-5-2-5-5z"/><line x1="7" y1="4" x2="7" y2="7"/><circle cx="7" cy="9.5" r=".6" fill="currentColor" stroke="none"/></svg>
+      Hide
+    </button>
+  </div>
+</div>
 
 <!-- PAGE -->
 <div class="page-wrap">
@@ -212,49 +208,49 @@
             <div class="pp-today-marker" style="left:48.6%"></div>
           </div>
         </div>
-        <div class="pp-today-range"><span>Low &nbsp; $27,928</span><span>High &nbsp; $31,504</span></div>
+        <div class="pp-today-range"><span>Low &nbsp; $27,826</span><span>High &nbsp; $31,504</span></div>
       </div>
 
       <!-- Similar units -->
       <div class="pp-similar-title">Similar units recently sold on OPENLANE</div>
       <div class="pp-similar-sub">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="5" width="12" height="7" rx="1" stroke="#9ca3af" stroke-width="1.2"/><path d="M3 5V3.5a4 4 0 018 0V5" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/></svg>
-        Based on 2,845 similar vehicles sold in the last 3 months
-        <div style="font-size:10px;color:#9ca3af;margin-top:2px;">43 distinct dealers</div>
+        Based on 3,949 similar vehicles sold in the last 3 months
+        <div style="font-size:10px;color:#9ca3af;margin-top:2px;">321 distinct bidders</div>
       </div>
       <table class="comp-table">
         <thead><tr><th>Vehicle</th><th>Major Inspection Issues</th><th>AutoCheck</th><th>Transaction date</th><th>Price</th></tr></thead>
         <tbody>
           <tr>
-            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 16,013 mi &middot; Houston, TX</div></td>
+            <td><div class="ct-row-inner"><img class="ct-thumb" src="photos/photo_01.jpg" alt=""><div><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 16,913 mi &middot; Houston, TX</div></div></div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
             <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 02, 2026</td>
             <td class="ct-price">$26,900</td>
           </tr>
           <tr>
-            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 7,664 mi &middot; Santa Rosa, CA</div></td>
+            <td><div class="ct-row-inner"><img class="ct-thumb" src="photos/photo_02.jpg" alt=""><div><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 7,664 mi &middot; Santa Rosa, CA</div></div></div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
             <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 17, 2026</td>
             <td class="ct-price">$28,700</td>
           </tr>
           <tr>
-            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 18,759 mi &middot; Riverside, CA</div></td>
+            <td><div class="ct-row-inner"><img class="ct-thumb" src="photos/photo_03.jpg" alt=""><div><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 15,759 mi &middot; Riverside, CA</div></div></div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
             <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 21, 2026</td>
             <td class="ct-price">$28,900</td>
           </tr>
           <tr>
-            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 9,974 mi &middot; Scottsdale, AZ</div></td>
+            <td><div class="ct-row-inner"><img class="ct-thumb" src="photos/photo_01.jpg" alt=""><div><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 9,974 mi &middot; Scottsdale, AZ</div></div></div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
             <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 20, 2026</td>
             <td class="ct-price">$29,200</td>
           </tr>
           <tr>
-            <td><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 14,175 mi &middot; Huntington Beach, CA</div></td>
+            <td><div class="ct-row-inner"><img class="ct-thumb" src="photos/photo_02.jpg" alt=""><div><div class="ct-vehicle">2024 Hyundai Ioniq 5 Limited</div><div class="ct-details">RWD 77.4 kWh &middot; 14,179 mi &middot; Huntington Beach, CA</div></div></div></td>
             <td><span class="ct-ok">&#10003; No issues</span></td>
             <td><div class="ct-ac"><span class="ct-ok">&#10003;</span> Title/Problems<br><span class="ct-ok">&#10003;</span> Odometer<br><span class="ct-ok">&#10003;</span> Use/Events</div></td>
             <td>April 21, 2026</td>
