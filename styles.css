@@ -305,7 +305,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ── BOTTOM BAR ── */
 .btm-bar { position: fixed; bottom: 0; left: 0; right: 0; height: 52px; background: #fff; border-top: 1px solid #e0e0e0; display: flex; align-items: center; padding: 0 20px; gap: 14px; z-index: 200; }
 .btm-meta { display: flex; align-items: center; gap: 10px; }
-.btm-label { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 5px; padding: 4px 10px; font-size: 12px; color: #92400e; font-weight: 600; }
+.btm-label { background: #fff; border: 1px solid #0052cc; border-radius: 5px; padding: 4px 10px; font-size: 12px; color: #0052cc; font-weight: 600; }
 /* As Described Guarantee section */
 .adg-section { padding: 16px 20px; border-top: 1px solid #efefef; }
 .adg-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }

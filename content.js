@@ -377,7 +377,7 @@ document.getElementById('rightSidebar').innerHTML = `
     </div>
     <div class="sb-meta">
       <div class="sb-row">
-        <span class="ico ico-gray">&#128197;</span>
+        <span class="ico" style="color:#555;"><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="2" width="12" height="11" rx="1.2"/><line x1="1" y1="5.5" x2="13" y2="5.5"/><line x1="4.5" y1="1" x2="4.5" y2="4"/><line x1="9.5" y1="1" x2="9.5" y2="4"/><line x1="4" y1="8" x2="10" y2="8" stroke-width="1"/><line x1="4" y1="10.5" x2="8" y2="10.5" stroke-width="1"/></svg></span>
         Published on Apr 24 at 9:53 am
       </div>
       <div class="sb-row">
@@ -389,15 +389,15 @@ document.getElementById('rightSidebar').innerHTML = `
         3 interested
       </div>
       <div class="sb-row">
-        <span class="ico" style="color:#555;">&#128196;</span>
+        <span class="ico" style="color:#555;"><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 1h6l3 3v9H3V1z" stroke-linejoin="round"/><path d="M9 1v3h3" stroke-linejoin="round"/><line x1="5" y1="6.5" x2="10" y2="6.5" stroke-width="1"/><line x1="5" y1="8.5" x2="10" y2="8.5" stroke-width="1"/><line x1="5" y1="10.5" x2="8" y2="10.5" stroke-width="1"/></svg></span>
         Seller has title in hand
       </div>
       <div class="sb-row">
-        <span class="ico ico-ok">&#10003;</span>
+        <span class="ico" style="color:#555;"><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="7" cy="7" r="6"/><path d="M7 3.5v7M5 5c0-.8.9-1.5 2-1.5s2 .7 2 1.5-.9 1.3-2 1.5-2 .8-2 1.5.9 1.5 2 1.5 2-.7 2-1.5" stroke-linecap="round"/></svg></span>
         Buyback Guarantee Included
       </div>
-      <div class="sb-row">
-        <span class="ico ico-ok">&#10003;</span>
+      <div class="sb-row" style="color:#16a34a;">
+        <span class="ico"><svg viewBox="0 0 14 14" width="13" height="13" fill="none"><circle cx="7" cy="7" r="6.5" fill="#16a34a"/><path d="M4 7l2.2 2.5L10 4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         Starting bid = floor
       </div>
     </div>
@@ -468,7 +468,7 @@ document.getElementById('rightSidebar').innerHTML = `
     <div class="ac-checks">
       <div class="ac-chk"><span class="ok">&#10003;</span> Title/Problems</div>
       <div class="ac-chk"><span class="ok">&#10003;</span> Odometer</div>
-      <div class="ac-chk"><span class="warn">&#9888;</span> Use/Events</div>
+      <div class="ac-chk"><span class="ok">&#10003;</span> Use/Events</div>
     </div>
   </div>
 
