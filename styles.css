@@ -75,7 +75,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .carousel-main { position: relative; width: 100%; height: calc(100vh - 80px - 52px - 52px); min-height: 420px; background: #222; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .carousel-img { width: 100%; height: 100%; object-fit: cover; display: none; }
 .carousel-img.active { display: block; }
-.carousel-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.carousel-photo { width: 100%; height: 100%; object-fit: contain; display: block; }
 .vb-toggle {
   position: absolute; top: 12px; left: 12px; z-index: 10;
   background: rgba(255,255,255,0.95); backdrop-filter: blur(6px);
