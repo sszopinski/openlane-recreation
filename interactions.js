@@ -12,7 +12,7 @@
     const img = document.getElementById('carouselPhoto');
     if (img) img.src = photos[current];
     const counter = document.getElementById('carouselCounter');
-    if (counter) counter.textContent = `${current + 1} / ${photos.length}`;
+    if (counter) counter.textContent = `${current + 1} / 22`;
     document.querySelectorAll('.c-thumb').forEach((t, i) => {
       t.classList.toggle('sel', i === current);
     });

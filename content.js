@@ -42,7 +42,7 @@ document.getElementById('leftPanel').innerHTML = `
 
     <button class="c-nav prev" id="carouselPrev">&#8249;</button>
     <button class="c-nav next" id="carouselNext">&#8250;</button>
-    <div class="c-counter" id="carouselCounter">1 / ${photos.length}</div>
+    <div class="c-counter" id="carouselCounter">1 / 22</div>
   </div>
 
   <div class="thumb-strip" id="thumbStrip">
@@ -82,7 +82,11 @@ document.getElementById('leftPanel').innerHTML = `
       <div class="cr-sec-title">Photo gallery</div>
     </div>
     <div class="photo-gallery-strip">
-      ${['28%','44%','60%','76%','90%'].map((pos, i) => `<div class="gal-thumb" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:${pos} center;">${i === 4 ? '<div class="gal-more">+15 more</div>' : ''}</div>`).join('')}
+      <div class="gal-thumb" style="background-image:url('photos/insp_01.jpg');background-size:cover;background-position:center center;"></div>
+      <div class="gal-thumb" style="background-image:url('photos/insp_02.jpg');background-size:cover;background-position:center center;"></div>
+      <div class="gal-thumb" style="background-image:url('photos/insp_03.jpg');background-size:cover;background-position:center center;"></div>
+      <div class="gal-thumb" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:28% center;"></div>
+      <div class="gal-thumb" style="background-image:url('photos/insp_01.jpg');background-size:cover;background-position:center center;"><div class="gal-more">+15 more</div></div>
     </div>
   </div>
 
@@ -123,9 +127,9 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:30% center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:55% center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:80% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/insp_02.jpg');background-size:cover;background-position:center center;"></div>
+        <div class="pg-t" style="background-image:url('photos/insp_02.jpg');background-size:cover;background-position:30% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/insp_02.jpg');background-size:cover;background-position:70% center;"></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Vehicle operation</div></div>
@@ -262,10 +266,10 @@ document.getElementById('leftPanel').innerHTML = `
     </div>
     <div class="cr-sec-body">
       <div class="pg">
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:33% center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:44% center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:70% center;"></div>
-        <div class="pg-t" style="background-image:url('photos/photo_01.jpg');background-size:cover;background-position:92% center;"><div class="pg-overlay">+1 more</div></div>
+        <div class="pg-t" style="background-image:url('photos/insp_01.jpg');background-size:cover;background-position:center center;"></div>
+        <div class="pg-t" style="background-image:url('photos/insp_03.jpg');background-size:cover;background-position:center center;"></div>
+        <div class="pg-t" style="background-image:url('photos/insp_01.jpg');background-size:cover;background-position:40% center;"></div>
+        <div class="pg-t" style="background-image:url('photos/insp_03.jpg');background-size:cover;background-position:60% center;"><div class="pg-overlay">+1 more</div></div>
       </div>
       <div class="check-list">
         <div class="ci"><div class="ci-dot ok">&#10003;</div><div class="ci-lbl">Interior damage</div></div>
@@ -369,7 +373,7 @@ document.getElementById('rightSidebar').innerHTML = `
     <div class="sb-vin-row">
       <span class="sb-miles">7,757 miles</span>
       <span class="sb-sep">|</span>
-      <span class="sb-vin">VIN KM8KRADE3NU266172</span>
+      <span class="sb-vin">VIN KM8K6ADE3RU296172</span>
       <span class="sb-ico" title="Copy">&#10697;</span>
       <span class="sb-ico" title="Photos">&#128247;</span>
     </div>
@@ -380,7 +384,7 @@ document.getElementById('rightSidebar').innerHTML = `
       </div>
       <div class="sb-row">
         <span class="ico ico-warn">&#9888;</span>
-        Expires today at 3:00 pm
+        Expires today at 01:00 pm
       </div>
       <div class="sb-row">
         <span class="ico ico-blue">&#8226;</span>
@@ -388,7 +392,7 @@ document.getElementById('rightSidebar').innerHTML = `
       </div>
       <div class="sb-row">
         <span class="ico" style="color:#f59e0b;">&#9888;</span>
-        Buyer has title to send
+        Seller has title in hand
       </div>
       <div class="sb-row">
         <span class="ico ico-ok">&#10003;</span>
@@ -470,7 +474,7 @@ document.getElementById('rightSidebar').innerHTML = `
       <a class="ac-report-lnk" id="viewFullReport">View full report</a>
     </div>
     <div class="ac-counts">
-      <div class="ac-count"><strong>0</strong> Owner(s)</div>
+      <div class="ac-count"><strong>1</strong> Owner(s)</div>
       <div class="ac-count"><strong>0</strong> Accident(s)</div>
     </div>
     <div class="ac-checks">
